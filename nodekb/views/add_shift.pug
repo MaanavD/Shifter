@@ -2,6 +2,8 @@ extends layout
 
 block content
   h1 Add a Shift to our Database:
+  br
+  br
   form(method='POST',action='/shift/add')
     #form-group
     .row
@@ -28,4 +30,4 @@ block content
         .col-lg-10
           textarea.form-control(name='user_id')
 
-    input.btn.subbtn.btn-primary(type='submit', value = 'submit')
+    input.btn.subbtn.btn-danger(type='submit', value = 'submit')

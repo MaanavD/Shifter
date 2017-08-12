@@ -103,7 +103,7 @@ app.get('/', function (req, res) {
     }
     else{
     res.render('shifts', {
-      title: 'shifts',
+      title: 'Available Shifts',
       shifts: shifts
     });
   }
