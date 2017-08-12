@@ -24,6 +24,18 @@ function callback(responseText, reference_item){
 function businessPathEscape(full_business_path){
 
 }
+/************/
+function initMap() {
+  var uluru = {lat: -25.363, lng: 131.044};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: uluru
+  });
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+}
 
 $(document).ready(function(){
   base_path = "https://services3.arcgis.com/rl7ACuZkiFsmDA2g/arcgis/rest/services/Economic_Development/FeatureServer/0/query?where=";
@@ -40,6 +52,8 @@ $(document).ready(function(){
     request = "COMPANY_NAME LIKE '%" + names[i][0] + "%'&f=json&outFields=BUSINESS_FULL_ADDRESS";
     httpGetAsync(base_path + request, callback, names[i][1]);
   }
+
+
 
 
 });
