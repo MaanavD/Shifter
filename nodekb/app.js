@@ -20,6 +20,7 @@ const app = express();
 //bring in models
 let Article = require('./models/article');
 let Shift = require('./models/shift');
+
 //load view engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -50,7 +51,6 @@ app.get('/articles/add', function(req,res){
     title: 'Add Article',
   });
 })
-
 //add submit post route
 app.post('/articles/add', function(req,res){
   let article = new Article();
@@ -86,6 +86,12 @@ app.get('/', function (req, res) {
 app.get('/shift/add', function(req,res){
   res.render('add_shift', {
     title: 'Add shift',
+  });
+})
+
+app.get('/shift/splash', function(req,res){
+  res.render('splash', {
+    title: 'Add splash',
   });
 })
 
