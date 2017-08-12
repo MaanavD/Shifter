@@ -127,8 +127,12 @@ app.post('/shift/add', function(req,res){
   });
 });
 
-app.post('/shift/delete', function(req, res){
+app.post('/shift/accept', function(req, res){
+  var id = req.body.id;
 
+  Shift.find({_id: id}).remove(function(err){
+    res.redirect('/');
+  })
 });
 
 app.use('/jquery', express.static(__dirname + '/scripts/'))

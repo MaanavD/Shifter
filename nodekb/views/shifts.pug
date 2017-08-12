@@ -4,7 +4,7 @@ block content
     h1 #{title}
     each shift, i in shifts
       .panel.panel-default
-        .panel-heading.shift 
+        .panel-heading.shift
           h5(class='title')= shift.title
         .panel-body
           .row
@@ -15,7 +15,9 @@ block content
               u End  Time:
               h6=shift.end_time
             .col-lg-3
-              b Posted By: 
+              b Posted By:
               h6=shift.user_id
             .col-lg-3
-              button.btn.btn-success.tempbtn Accept Shift
+              form(method='POST',action='/shift/accept')
+                input(type='hidden', name='id', value=shift.id)
+                input.btn.btn-success.tempbtn(type='submit', value='Accept Shift')
