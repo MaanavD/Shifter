@@ -13,6 +13,21 @@ function createMessage(message){
     to: "6477858729",
     from: "2898001716"
   }).then((message) =>  console.log(message.sid));
+  client.messages.create({
+    body: message,
+    to: "6477718718",
+    from: "2898001716"
+  }).then((message) =>  console.log(message.sid));
+  client.messages.create({
+    body: message,
+    to: "6475259191",
+    from: "2898001716"
+  }).then((message) =>  console.log(message.sid));
+  client.messages.create({
+    body: message,
+    to: "6476256012",
+    from: "2898001716"
+  }).then((message) =>  console.log(message.sid));
 }
 
 mongoose.connect('mongodb://localhost/nodekb');
