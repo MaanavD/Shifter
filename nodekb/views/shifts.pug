@@ -3,8 +3,17 @@ extends layout
 block content
     h1 #{title}
     each shift, i in shifts
-      ul(class='shift')
-        li(class='title')= shift.title
-        li= shift.start_time
-        li= shift.end_time
-        li= shift.user_id
+      .panel.panel-default
+        .panel-heading.shift 
+          h5(class='title')= shift.title
+        .panel-body
+          .row
+            .col-lg-3
+              u Start Time:
+              h6=shift.start_time
+            .col-lg-3
+              u End  Time:
+              h6=shift.end_time
+            .col-lg-3
+              b Posted By: 
+              h6=shift.user_id

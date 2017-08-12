@@ -14,7 +14,7 @@ function callback(responseText, reference_item){
   result = JSON.parse(responseText).features;
   if(result.length > 0){
     //var title = reference_item.text();
-    var title = " directions "
+    var title = " - Directions to Workplace"
     var maps_url = "https://www.google.ca/maps/place/" + result[0].attributes.BUSINESS_FULL_ADDRESS
     reference_item.append("<a target='_blank' size=10 href='" + maps_url + "'>"+ title +"</a>");
   }
