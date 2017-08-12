@@ -9,6 +9,7 @@
   "author": "Maanav Dalal",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "jquery": "^3.2.1",
