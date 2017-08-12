@@ -85,7 +85,7 @@ app.get('/', function (req, res) {
 
 app.get('/shift/add', function(req,res){
   res.render('add_shift', {
-    title: 'Add shift',
+    title: 'Add A Shift',
   });
 })
 

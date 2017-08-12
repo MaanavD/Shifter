@@ -8,7 +8,7 @@
   opacity: 0.5;
   height: 110px;
   margin-top: 25px;
-  margin-left: 25px; 
+  margin-left: 25px;
   font-size: 20px;
   color: #fff;
 }
@@ -29,9 +29,12 @@ button.disabled {
   position: relative;
   height: 660px;
 }
-
+.tempbtn{
+  width: 100%;
+  length: 100%;
+}
 img{
-  padding-top: 170px;
+  padding-top: 0px;
   width: 100%;
 }
 h2{
