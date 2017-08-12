@@ -87,11 +87,23 @@ app.get('/shift/add', function(req,res){
   res.render('add_shift', {
     title: 'Add Shift',
   });
-})
+});
 
 app.get('/splash', function(req,res){
   res.render('splash', {
     title: 'Add splash',
+  });
+});
+
+app.get('/settings', function(req,res){
+  res.render('settings', {
+    title: 'Settings',
+  });
+})
+
+app.get('/profile', function(req,res){
+  res.render('profile', {
+    title: 'Profile',
   });
 })
 
@@ -113,7 +125,6 @@ app.post('/shift/add', function(req,res){
   });
 });
 
-<<<<<<< HEAD
 app.post('/shift/accept', function(req, res){
   var id = req.body.id;
 
@@ -122,9 +133,7 @@ app.post('/shift/accept', function(req, res){
   })
 });
 
-=======
->>>>>>> a121887f77c3d53243d6b8e7cbe540f0cbcc0778
-app.use('/jquery', express.static(__dirname + '/scripts/'))
+app.use('/jquery', express.static(__dirname + '/scripts/'));
 app.get('/scripts/opendata.js', function(req, res){
   res.sendFile(path.join(__dirname + '/scripts/opendata.js'));
 });

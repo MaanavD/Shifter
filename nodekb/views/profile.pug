@@ -1,13 +1,14 @@
 extends layout
 
 block content
+  link(rel='stylesheet', type='text/css', href='profile.css')
   .col-sm-9.col-lg-10.mainscreen
             .janebox.janetext.rounded
               h1 My Profile
               .middlebox
-                h3  Name: Nathan Au 
-                h3  Phone: (647) 648-6488 
-                h3  Qualifications: 
+                h3  Name: Nathan Au
+                h3  Phone: (647) 648-6488
+                h3  Qualifications:
                 ul
                   li
                     | Certified in Google Awards
@@ -26,20 +27,20 @@ block content
               .lastbox
                 br
                 br
-                h3  Past Reviews 
+                h3  Past Reviews
               .lastbox.reviews
-                p  "Great work ethic; persistent and thorough in work! 
-                p.rightext  - Steve Jobs 
-                p  “Work is clean and done well!” 
-                p.rightext  - Jeffrey Ng 
-                p  “10/10 would recommend!” 
-                p.rightext  - Mark Zuckerberg 
+                p  "Great work ethic; persistent and thorough in work!
+                p.rightext  - Steve Jobs
+                p  “Work is clean and done well!”
+                p.rightext  - Jeffrey Ng
+                p  “10/10 would recommend!”
+                p.rightext  - Mark Zuckerberg
               // edit profile photo
               .janesmallbox
                 img#profilepicture(src='http://whysquare.co.nz/wp-content/uploads/2013/07/profile_square3-270x270.jpg', alt='Profile Picture')
                 br
                 // change to change to a button
-                p  edit 
+                p  edit
               .janesmallbox.companies
                 h3 Companies
                 // change to change to a button

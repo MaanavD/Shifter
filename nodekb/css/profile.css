@@ -1,0 +1,95 @@
+/********** Profile ************/
+.janebox {
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  height: 85%;
+  border-radius: 20px;
+}
+.janetext {
+  text-align: center;
+  color: #FFF;
+  padding-top: 2px;
+}
+.mainscreen h1 {
+  font-size: 90px;
+}
+.janesmallbox {
+width: 25%;
+margin-left: 10px;
+margin-top: 20px;
+
+}
+.janesmallbox img{
+border: 5px solid #FFF;
+width: 65%;
+border-radius: 5px;
+margin-bottom: 0px;
+padding-bottom: 0px;
+}
+p {
+font-size:18px;
+}
+
+.companies {
+background-color: rgba(255, 255, 255, 0.3);
+height: 35%;
+border-radius: 40px;
+width: 20%;
+margin-left: 38px;
+padding-top: 0.2px;
+
+}
+.companies ul {
+text-align: left;
+font-size: 16px;
+}
+
+.middlebox {
+position: absolute;
+background-color: rgba(255, 255, 255, 0.3);
+border-radius: 40px;
+width: 38.5%;
+margin-left: 23%;
+height: 61.5%;
+text-align: left;
+padding-left: 30px;
+}
+
+.middlebox li{
+font-size: 22px;
+padding-left: 20px;
+}
+
+.lastbox {
+position: absolute;
+background-color: rgba(255, 255, 255, 0.3);
+border-radius: 40px;
+width: 20%;
+margin-left: 64%;
+height: 21.5%;
+text-align: center;
+
+}
+
+.reviews {
+position: absolute;
+background-color: rgba(255, 255, 255, 0.3);
+border-radius: 40px;
+width: 20%;
+margin-left: 64%;
+height: 38%;
+margin-top: 14%;
+text-align: left;
+padding: 16px ;
+line-height: normal;
+}
+
+.reviews p{
+font-size: 15px;
+}
+.rightext {
+text-align: right;
+}

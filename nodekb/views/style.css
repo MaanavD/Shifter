@@ -30,6 +30,13 @@ button.disabled {
   height: 660px;
 }
 
+.mainscreen img {
+  height: 500px;
+  width: auto;
+  margin-left: 225px;
+  margin-top: 50px;
+}
+
 .tempbtn{
   width: 100%;
   length: 100%;

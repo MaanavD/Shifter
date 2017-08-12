@@ -4,11 +4,14 @@ html
     title knowledgebase
     script(src="/jquery/jquery-3.2.1.min.js")
     script(src="/scripts/opendata.js")
+
     <style type="text/css">
-        include style.css
-        include navbar-fixed-side.css
-        include bootstrap.min.css
+            include style.css
+            include navbar-fixed-side.css
+            include bootstrap.min.css
+            include ../css/profile.css
     </style>
+
     body
       .container-fluid
           .row
@@ -27,12 +30,12 @@ html
                   br
                   i.fa.fa-calendar-o(aria-hidden='true')
                 |
-                button.btn.btnnav(onclick="location.href='profile.html'")
+                button.btn.btnnav(onclick="location.href='http://localhost:7070/profile'")
                   | My Profile
                   br
                   i.fa.fa-user(aria-hidden='true')
                 |
-                button.btn.btnnav(onclick="location.href='settings.html'")
+                button.btn.btnnav(onclick="location.href='http://localhost:7070/settings'")
                   | Settings
                   br
                   i.fa.fa-cogs(aria-hidden='true')
