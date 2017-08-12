@@ -3,6 +3,18 @@ const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+var twilio = require('twilio');
+var accountSid = "ACd32ab1f924e3c97cd9ea367247e2e404";
+var authToken = "a5ac34baeb39086e519fd7a6e1956811";
+var client = new twilio(accountSid, authToken);
+function createMessage(message){
+  client.messages.create({
+    body: message,
+    to: "6477858729",
+    from: "2898001716"
+  }).then((message) =>  console.log(message.sid));
+}
+
 mongoose.connect('mongodb://localhost/nodekb');
 let db = mongoose.connection;
 
@@ -120,6 +132,7 @@ app.post('/shift/add', function(req,res){
       console.log(err);
       return;
     }else{
+      createMessage("Heads up a new shift at " + shift.title + " has been posted by " + shift.user_id + " on Shifter")
       res.redirect('/');
     }
   });
@@ -129,6 +142,7 @@ app.post('/shift/accept', function(req, res){
   var id = req.body.id;
 
   Shift.find({_id: id}).remove(function(err){
+    createMessage("You have accepted to take the shift!");
     res.redirect('/');
   })
 });
