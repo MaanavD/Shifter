@@ -113,7 +113,6 @@ app.post('/shift/add', function(req,res){
   });
 });
 
-
 app.use('/jquery', express.static(__dirname + '/scripts/'))
 app.get('/scripts/opendata.js', function(req, res){
   res.sendFile(path.join(__dirname + '/scripts/opendata.js'));
@@ -121,8 +120,10 @@ app.get('/scripts/opendata.js', function(req, res){
 
 app.use(express.static('images'));
 
-
 //start server
 app.listen(7070, function () {
   console.log('Example app listening on port 7070!');
 })
+
+
+app.use(require('serve-static')(__dirname + '/../../public'));
