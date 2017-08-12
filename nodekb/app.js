@@ -17,9 +17,9 @@ db.on('error', function(err){
 //init
 const app = express();
 
-
 //bring in models
 let Article = require('./models/article');
+let Shift = require('./models/shift');
 //load view engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 //home route
-app.get('/', function (req, res) {
+app.get('/articles', function (req, res) {
   Article.find({}, function(err, articles){
     if(err){
       console.log(err);
@@ -67,6 +67,53 @@ app.post('/articles/add', function(req,res){
     }
   });
 });
+
+
+app.get('/', function (req, res) {
+  Shift.find({}, function(err, shifts){
+    if(err){
+      console.log(err);
+    }
+    else{
+    res.render('shifts', {
+      title: 'shifts',
+      shifts: shifts
+    });
+  }
+  });
+});
+
+app.get('/shift/add', function(req,res){
+  res.render('add_shift', {
+    title: 'Add shift',
+  });
+})
+
+//add submit post route
+app.post('/shift/add', function(req,res){
+  let shift = new Shift();
+  shift.title = req.body.title;
+  shift.start_time = req.body.start_time;
+  shift.end_time = req.body.end_time;
+  shift.user_id = req.body.user_id;
+
+  shift.save(function(err){
+    if(err){
+      console.log(err);
+      return;
+    }else{
+      res.redirect('/');
+    }
+  });
+});
+
+
+app.use('/jquery', express.static(__dirname + '/scripts/'))
+app.get('/scripts/opendata.js', function(req, res){
+  res.sendFile(path.join(__dirname + '/scripts/opendata.js'));
+});
+
+
 //start server
 app.listen(7070, function () {
   console.log('Example app listening on port 7070!');

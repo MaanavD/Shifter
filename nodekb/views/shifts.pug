@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1 #{title}
+    each shift, i in shifts
+      ul(class='shift')
+        li(class='title')= shift.title
+        li= shift.start_time
+        li= shift.end_time
+        li= shift.user_id

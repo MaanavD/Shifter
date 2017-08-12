@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST',action='/shift/add')
+    #form-group
+      label title:
+      input.form-control(name='title',type='text')
+    #form-group
+      label start_time:
+      input.form-control(name='start_time',type='text')
+    #form-group
+      label end_time:
+      textarea.form-control(name='end_time')
+    #form-group
+      label user_id:
+      textarea.form-control(name='user_id')
+
+    input.btn.btn-primary(type='submit', value = 'submit')
