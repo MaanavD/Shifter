@@ -15,22 +15,35 @@
 }
 .mainscreen h1 {
   font-size: 90px;
+  color: #FFF;
+
 }
+
+.mainscreen h3 {
+  font-weight: bold;
+  color: #FFF;
+
+}
+
 .janesmallbox {
 width: 25%;
 margin-left: 10px;
 margin-top: 20px;
-
 }
 .janesmallbox img{
 border: 5px solid #FFF;
-width: 65%;
+position: absolute;
+margin-left: -62px;
+margin-top: 0px;
+width: 15%;
+height: 20%;
 border-radius: 5px;
-margin-bottom: 0px;
-padding-bottom: 0px;
+float: left;
+
 }
 p {
 font-size:18px;
+
 }
 
 .companies {
@@ -45,6 +58,7 @@ padding-top: 0.2px;
 .companies ul {
 text-align: left;
 font-size: 16px;
+color: #FFF;
 }
 
 .middlebox {
@@ -59,7 +73,7 @@ padding-left: 30px;
 }
 
 .middlebox li{
-font-size: 22px;
+font-size: 20px;
 padding-left: 20px;
 }
 
@@ -81,7 +95,7 @@ border-radius: 40px;
 width: 20%;
 margin-left: 64%;
 height: 38%;
-margin-top: 14%;
+margin-top: 17.5%;
 text-align: left;
 padding: 16px ;
 line-height: normal;
