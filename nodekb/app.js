@@ -16,14 +16,11 @@ db.on('error', function(err){
 });
 //init
 const app = express();
-var twilio = require('twilio');
-var accountSid = "ACd32ab1f924e3c97cd9ea367247e2e404";
-var authToken = "a5ac34baeb39086e519fd7a6e1956811";
 
-var client = new twilio(accountSid, authToken);
 //bring in models
 let Article = require('./models/article');
 let Shift = require('./models/shift');
+
 //load view engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -54,7 +51,6 @@ app.get('/articles/add', function(req,res){
     title: 'Add Article',
   });
 })
-
 //add submit post route
 app.post('/articles/add', function(req,res){
   let article = new Article();
@@ -87,22 +83,17 @@ app.get('/', function (req, res) {
   });
 });
 
-
-function createMessage(shiftTitle){
-  console.log("in create message");
-  client.messages.create({
-    body: "Heads up! New shift available on shifter at " + shiftTitle + ".",
-    to: "6477858729",
-    from: "2898001716"
-  }).then((message) =>  console.log(message.sid));
-}
-
 app.get('/shift/add', function(req,res){
   res.render('add_shift', {
     title: 'Add shift',
   });
 })
 
+app.get('/shift/splash', function(req,res){
+  res.render('splash', {
+    title: 'Add splash',
+  });
+})
 
 //add submit post route
 app.post('/shift/add', function(req,res){
@@ -117,7 +108,6 @@ app.post('/shift/add', function(req,res){
       console.log(err);
       return;
     }else{
-        createMessage(shift.title);
       res.redirect('/');
     }
   });
