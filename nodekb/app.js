@@ -119,6 +119,8 @@ app.get('/scripts/opendata.js', function(req, res){
   res.sendFile(path.join(__dirname + '/scripts/opendata.js'));
 });
 
+app.use(express.static('images'));
+
 
 //start server
 app.listen(7070, function () {
