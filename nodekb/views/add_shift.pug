@@ -1,19 +1,38 @@
 extends layout
 
 block content
-  h1 #{title}
+  h1 Add a Shift to our Database:
   form(method='POST',action='/shift/add')
     #form-group
-      label title:
-      input.form-control(name='title',type='text')
+    .row
+      .col-lg-2
+        label Title of Opening:
+      .col-lg-10
+        input.form-control(name='title',type='text')
     #form-group
-      label start_time:
-      input.form-control(name='start_time',type='text')
+      .row.topPad
+        .col-lg-2
+          label Shift start info:
+        .col-lg-10
+          input.form-control(name='start_time',type='text')
     #form-group
-      label end_time:
-      textarea.form-control(name='end_time')
+      .row.topPad
+        .col-lg-2
+          label Shift end info:
+        .col-lg-10
+          textarea.form-control(name='end_time')
     #form-group
+<<<<<<< HEAD
       label user_id:
       textarea.form-control(name='user_id')
       
     input.btn.btn-primary(type='submit', value = 'submit')
+=======
+      .row.topPad
+        .col-lg-2
+          label Employer's Name / Extra info:
+        .col-lg-10
+          textarea.form-control(name='user_id')
+
+    input.btn.subbtn.btn-primary(type='submit', value = 'submit')
+>>>>>>> a121887f77c3d53243d6b8e7cbe540f0cbcc0778

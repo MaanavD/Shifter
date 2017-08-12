@@ -34,6 +34,18 @@ button.disabled {
   width: 100%;
   length: 100%;
 }
+.subbtn{
+  width: 100%;
+  length: 100px;
+  margin-top: 50px;
+}
+.splashimg{
+  padding-top: 175px;
+}
+.topPad{
+  padding-top: 25px;
+}
+
 img{
   padding-top: 0px;
   width: 100%;

@@ -6,19 +6,6 @@ const bodyParser = require('body-parser');
 mongoose.connect('mongodb://localhost/nodekb');
 let db = mongoose.connection;
 
-// Handle Twilio
-var twilio = require('twilio');
-var accountSid = "ACd32ab1f924e3c97cd9ea367247e2e404";
-var authToken = "a5ac34baeb39086e519fd7a6e1956811";
-var client = new twilio(accountSid, authToken);
-function createMessage(shiftTitle){
-   client.messages.create({
-     body: "Heads up! New shift available on shifter at " + shiftTitle + ".",
-     to: "6477858729",
-     from: "2898001716"
- }).then((message) =>  console.log(message.sid));
-}
-
 //check connection
 db.once('open', function(){
   console.log('Connected to MongoDB');
@@ -98,7 +85,7 @@ app.get('/', function (req, res) {
 
 app.get('/shift/add', function(req,res){
   res.render('add_shift', {
-    title: 'Add A Shift',
+    title: 'Add Shift',
   });
 })
 
@@ -121,12 +108,12 @@ app.post('/shift/add', function(req,res){
       console.log(err);
       return;
     }else{
-      createMessage(shift.title);
       res.redirect('/');
     }
   });
 });
 
+<<<<<<< HEAD
 app.post('/shift/accept', function(req, res){
   var id = req.body.id;
 
@@ -135,6 +122,8 @@ app.post('/shift/accept', function(req, res){
   })
 });
 
+=======
+>>>>>>> a121887f77c3d53243d6b8e7cbe540f0cbcc0778
 app.use('/jquery', express.static(__dirname + '/scripts/'))
 app.get('/scripts/opendata.js', function(req, res){
   res.sendFile(path.join(__dirname + '/scripts/opendata.js'));
@@ -142,8 +131,10 @@ app.get('/scripts/opendata.js', function(req, res){
 
 app.use(express.static('images'));
 
-
 //start server
 app.listen(7070, function () {
   console.log('Example app listening on port 7070!');
 })
+
+
+app.use(require('serve-static')(__dirname + '/../../public'));

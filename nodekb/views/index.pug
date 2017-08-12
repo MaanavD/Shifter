@@ -1,9 +1,232 @@
-extends layout
-
-block content
-    h1 #{title}
-    each article, i in articles
-      ul
-        li= article.title
-        li= article.author
-        li= article.body
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags
+    title Shifter
+    link(href='https://fonts.googleapis.com/css?family=Righteous', rel='stylesheet')
+    // Bootstrap
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='css/style2.css')
+    link(rel='stylesheet', href='css/font-awesome.css')
+    // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 8
+      script(src='https://oss.maxcdn.com/html5shiv/4.7.4/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    style.
+      * {
+      padding: 0;
+      margin: 0;
+      }
+      body {
+      overflow-x:hidden;
+      font-family: 'Righteous',cursive;
+      text-rendering: optimizeLegibility !important;
+      -webkit-font-smoothing: antialiased !important;
+      }
+      li {
+      list-style: none;
+      display: inline-block
+      }
+      a {
+      text-decoration:none;
+      transition: all 500ms ease-in-out;
+      }
+      a:hover,
+      a:active {
+      text-decoration: none;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+      font-family: "Righteous", cursive !important;
+      text-decoration:uppercase;
+      font-weight:700;
+      }
+      p {
+      font-size:15px;
+      line-height:21px;
+      }
+      .btn {
+      transition: all 300ms ease-in-out;
+      font-weight: 500 !important;
+      text-transform: uppercase;
+      }
+      .btn:hover {
+      background-color: #ededed !important;
+      color: #3c3c3c !important;
+      border: 1px solid #fff !important;
+      }
+      /*Nav*/
+      .navbar a{
+      color: #FF4E50 !important;
+      opacity: 0.7;
+      }
+      .navbar a:hover{
+      opacity: 1;
+      background: #FF4E50 !important;
+      }
+      .navbar-colour {
+      background-color: #FF4E50 !important;
+      }
+      /*Header*/
+      .header{
+      height: 700px;
+      width: 100%;
+      background-color: #FF4E50;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background: radial-gradient(#EDE574,#FF4E50);
+      color: #fff;
+      }
+      .header img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 65%;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      padding-bottom: 60px;
+      padding-top: 70px;
+      }
+      .header .btn{
+      border-radius: 90;
+      }
+      .header .btn-primary {
+      background-color: #FFF;
+      color: #FF4E50;
+      border-color: #FF4E50;
+      }
+      #wrapper {
+      text-align: center;
+      margin-top: 0px;
+      align-items: center;
+      justify-content: center;
+      padding-top: 0px;
+      clear: both;
+      }
+      }
+      .header .row control-group {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 85%;
+      height: 70%;
+      }
+      /* .name{
+      height: auto;
+      width: auto;
+      max-height: 100px;
+      max-width: 300px;
+      padding: 30px 0 30px;
+      margin-top: 450px;
+      background-image: url(../images/wp1Cipher.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #fff;
+      }
+      */
+      .logoclass{
+      height: 30px;
+      padding-bottom: 5px;
+      }
+      /*About Me -  These style text*/
+      .aboutme img{
+      width: 40%;
+      padding: 25px 20px;
+      }
+      .aboutme{
+      padding: 80px 0 80px;
+      text-align: center;
+      background-image: url("http://i.imgur.com/ALsiL0a.jpg");
+      }
+      .aboutme h2,h3,h4{
+      color: #fff;
+      }
+      .aboutme p{
+      color: #fff;
+      padding-top: 15px;
+      font-size: 20px;
+      margin-left: 40px;
+      margin-right: 40px;
+      line-height: 180%;
+      }
+      .aboutme .box{
+      background-color: rgba(220, 220, 220, 0.3);
+      }
+      .aboutme .smallerbox {
+      background-color: rgba(220, 220, 220, 0.3);
+      width: 100%
+      }
+      .aboutme h1{
+      color: #FFF;
+      margin-bottom: 30px;
+      }
+      .aboutme {
+      background-image: url("http://i.imgur.com/ALsiL0a.jpg");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      }
+      .bg{
+      background: #526f77; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(#526f77, #1a1e1f); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#526f77,#1a1e1f); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#526f77, #1a1e1f); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#526f77,#1a1e1f); /* Standard syntax */
+      }
+  body(data-spy='scroll', data-target='.navbar', data-offset='50')
+    // Header
+    .bg
+      #header.header
+        .row
+          .col-xs-12.center
+            img(src='newcipher.png', alt='Logo')
+          #wrapper
+            .row.control-group
+              .form-group.btn.controls
+                input#name.form-control(type='text', placeholder='Username', required='', data-validation-required-message='Please enter your name.')
+                p.help-block.text-danger
+            .row.control-group
+              .form-group.btn.controls
+                input#email.form-control(type='password', placeholder='Password', required='', data-validation-required-message='Please enter your password.')
+                p.help-block.text-danger
+            a(href='nodekb/profile.html')
+              button.btn.btn-rounder-lg.btn-primary Login
+              a
+                br
+                br
+                a(href='register.html')
+                  button.btn.btn-rounder-lg.btn-primary Register
+    // About me
+    #aboutme.aboutme
+      .container
+        h1.text-center About
+        .row
+          .col-md-4.box
+            img(src='http://i.imgur.com/f4KZvz4.png', alt='questionmark')
+            h3  What is Shifter? 
+            p
+              | Ever have trouble getting shifts filled? Shifter is a platform which allows businesses to easily coordinate shift placements among their employees.
+          .col-md-4.box
+            img(src='http://i.imgur.com/3RbOWvj.png', alt='briefcase')
+            h3  What Can Shifter do? 
+            p
+              | Shifter provides for the accessibility and convenience in assigning shifts to ensure all placements are filled to ensure the full functionality of a business.
+          .col-md-4.box
+            img(src='http://i.imgur.com/JBegan9.png', alt='handclick')
+            h3  Why Shifter? 
+            p
+              | Shifter’s unique service sends an SMS to directly communicate with employees to ensure all shifts are not left empty and rewards them for participation.
+    // -Accomplishments-
+    // jQuery (necessary for Bootstrap's JavaScript plugins)
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    // Include all compiled plugins (below), or include individual files as needed
+    script(src='js/bootstrap.min.js')
+    script(src='js/scripts.js')
