@@ -1,0 +1,17 @@
+{
+  "name": "nodekb",
+  "version": "1.0.0",
+  "description": "simple knowledgebase",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "Maanav Dalal",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.6",
+    "pug": "^2.0.0-rc.3"
+  }
+}
