@@ -1,7 +1,10 @@
 extends layout
 
 block content
-  link(rel='stylesheet', type='text/css', href='profile.css')
+  <style>
+    include ../css/profile.css
+  </style>
+
   .col-sm-9.col-lg-10.mainscreen
             .janebox.janetext.rounded
               h1 My Profile
