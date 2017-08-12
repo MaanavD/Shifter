@@ -1,0 +1,414 @@
+* {
+ padding: 0;
+ margin: 0;
+ }
+body {
+ overflow-x:hidden;
+ font-family: 'Open Sans', sans-serif;
+ text-rendering: optimizeLegibility !important;
+ -webkit-font-smoothing: antialiased !important;
+ }
+li {
+ list-style: none;
+ display: inline-block
+ }
+a {
+ text-decoration:none;
+ transition: all 500ms ease-in-out;
+
+ }
+a:hover,
+a:active {
+ text-decoration: none;
+ }
+h1,
+h2,
+h4 {
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+ text-decoration:uppercase;
+ font-weight:700;
+ }
+p {
+ font-size:15px;
+ line-height:21px;
+ }
+.btn {
+ transition: all 300ms ease-in-out;
+ font-weight: 500 !important;
+ text-transform: uppercase;
+ }
+.btn:hover {
+ background-color: #ededed !important;
+ color: #3c3c3c !important;
+ border: 1px solid #fff !important;
+ }﻿
+
+/*Nav*/
+.navbar {
+  text-transform: uppercase;
+  /*font-family: !important; Change*/
+  font-weight: 700;
+}
+.navbar a{
+  color: #fff !important;
+  opacity: 0.7;
+}
+.navbar a:hover{
+  opacity: 1;
+  background: #97bdd0 !important;
+}
+.navbar-colour {
+    background-color: #526f77 !important;
+}
+/*Header*/
+.header{
+  height: 600px;
+  width: 100%;
+  padding: 30px 0 30px;
+  background-image: url(../images/wallpaper.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+.header img{
+  height: 350px;
+  width: 450px;
+  margin: 70px 0 0 40px;
+}
+.header h1{
+  font-size: 40px;
+  font-weight: 700;
+  padding-top: 30px;
+}
+.header h1,
+.header p,
+.header .button{
+  margin-top: 20px;
+}
+.header .btn{
+  border-radius: 0;
+  margin: 40px 20px;
+}
+.name{
+  height: auto;
+  width: auto;
+  max-height: 100px;
+  max-width: 300px;
+  padding: 30px 0 30px;
+  margin-top: 450px;
+  background-image: url(../images/wp1.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+.logoclass{
+  height: 30px;
+  padding-bottom: 5px;
+}
+
+
+/*About Me -  These style text*/
+.aboutme img{
+  height: 240px;
+  width: 240px;
+  padding: 25px 20px;
+  border-radius: 50%;
+  background-color: #b06b56;
+}
+
+.aboutme{
+  padding: 80px 0 80px;
+  text-align: center;
+}
+.aboutme h2,
+.aboutme h4{
+  color: #fff;
+  margin: 20px 0 20px;
+}
+.aboutme p{
+  color: #fff;
+  font-size: 14px;
+  padding-bottom: 40px;
+}
+.aboutme i{
+  height: 80px;
+  width: 80px;
+  font-size: 30px;
+  padding: 25px 20px;
+  margin-top: 75px;
+  border-radius: 50%;
+  background-color: #b06b56;
+  color: #fff;
+}
+
+/*Career Section*/
+.divideAS{
+  border-right:1px solid #b06b56;
+}
+.career .i{
+
+}
+.career{
+  padding: 80px 0 80px;
+  text-align: center
+}
+.career h2,
+.career h4{
+  color: #fff;
+    margin: 20px 0 20px;
+}
+.career p{
+  color: #fff;
+  font-size: 14px;
+  padding-bottom: 40px;
+}
+.career img{
+  height: 35px;
+  width: 35px;
+}
+
+/*Projects*/
+.overlay{
+  height: 400px;
+  width: 95%;
+  background-color: blue;
+}
+.image-middle{
+  width: 60px;
+  height: 60px;
+}
+.projects .btn{
+  width: 250px;
+  height: 100px;
+  border-radius: 0;
+  margin: 20px 20px;
+}
+.projects .button{
+  margin-top: 20px;
+}
+.projects h1{
+  color: #fff;
+}
+.projects h2{
+  color: #fff;
+}
+.projects h4{
+  color: #fff;
+}
+.projects .btn-warning{
+  background-color: #026301;
+  border-color:  #026301;
+}
+.projects .btn-danger{
+  background-color: #4285F4;
+  border-color:  #4285F4;
+}
+.projects .btn-primary{
+  background-color: #51287A;
+  border-color:  #51287A;
+}
+
+/*Parallax*/
+.parallax2 {
+    /* The image used */
+    background-image: url(../images/wp1.png);
+    height:350px;
+    width: 450px;
+    /* Full height */
+    /*height: 100%;*/
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*Progress bars*/
+.progress-bar {
+  width: 0;
+  animation: progress 7s ease-in-out forwards;
+
+  .title {
+    opacity: 0;
+    animation: show 0.35s forwards ease-in-out 0.5s;
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes show  {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*Popovers*/
+
+.popover-title {
+    color: #9d9d9d; /*This is text color*/
+    background: #526f77;
+    border-color: #9d9d9d;/*This is for the divider*/
+    font-size: 15px;
+}
+.popover-content {
+    color: #fff; /*Content box*/
+    background: #97bdd0;
+    font-size: 10px;
+}
+.popover{
+      border-color: black; /*Keep these the same*/
+      background: black;
+}
+.popover.bottom .arrow:after {
+  border-bottom-color: black; /*Arrow*/
+
+}
+/*Gallery*/
+body
+{
+  background-color:#eee
+}
+.wrap
+{
+  margin:20px auto 0 auto;
+  width:100%;
+  display:flex;
+  align-items:space-around;
+  max-width:1200px;
+}
+.tile
+{
+  width:380px;
+  height:380px;
+  margin:10px;
+  background: linear-gradient(#526f77, #1a1e1f);
+  display:inline-block;
+  background-size:cover;
+  position:relative;
+  cursor:pointer;
+  transition: all 0.4s ease-out;
+  box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
+  overflow:hidden;
+  color:white;
+  font-family:'Roboto';
+
+}
+.tile img
+{
+  margin-top: 25%;
+  max-height:100%;
+  max-width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:0;
+  transition: all 0.4s ease-out;
+
+}
+
+.tile .text
+{
+  position:absolute;
+  padding:30px;
+  height:calc(100% - 60px);
+}
+.tile h1
+{
+  font-size: 25px;
+  font-weight:300;
+  margin:0;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+.tile h2
+{
+  font-weight:100;
+  margin:20px 0 0 0;
+  font-size: 20px;
+  color: #97bdd0;
+   transform: translateX(200px);
+}
+.tile p
+{
+  font-weight:300;
+  margin:20px 0 0 0;
+  line-height: 25px;
+  transform: translateX(-200px);
+  transition-delay: 0.2s;
+}
+.animate-text
+{
+  opacity:0;
+  transition: all 0.6s ease-in-out;
+}
+.tile:hover
+{
+background-color:#b06b56;
+box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
+  /*transform:scale(1.05);*/
+
+}
+.tile:hover img
+{
+  opacity: 0.1;
+}
+.tile:hover .animate-text
+{
+  transform:translateX(0);
+  opacity:1;
+}
+/*Screen Size*/
+
+@media (max-width:1000px) {
+  .wrap {
+   flex-direction: column;
+    width:400px;
+  }
+  .header{
+    padding: 30px;
+    height: 750px;
+  }
+  .header img{
+    width: 90%;
+    height: 300px;
+    margin: 20px 0 0 20px;
+  }
+  .header .btn{
+    font-size: 10px;
+    margin-left: 20px;
+  }
+  .header h1{
+    font-size: 20px;
+  }
+  .header p{
+    font-size: 10px;
+  }
+  .aboutme i,
+  .abtmep {
+    display: none;
+  }
+  .header .name{
+      margin-top: 350px;
+  }
+  .career .divideAS{
+    border-right:none;
+    border-bottom:1px solid #b06b56;
+  }
+/*Try to add something to remove spacing of my face*/
+}
+.bg{
+    background: #526f77; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#526f77, #1a1e1f); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#526f77,#1a1e1f); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#526f77, #1a1e1f); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#526f77,#1a1e1f); /* Standard syntax */
+}
