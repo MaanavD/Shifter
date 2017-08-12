@@ -89,7 +89,7 @@ app.get('/shift/add', function(req,res){
   });
 })
 
-app.get('/shift/splash', function(req,res){
+app.get('/splash', function(req,res){
   res.render('splash', {
     title: 'Add splash',
   });

@@ -15,29 +15,27 @@ html
             .col-sm-2.col-lg-2
               nav.navbar.navbar-default.navbar-fixed-side.vnavcol
                 // -Send all to splash, do disabled icons-
-                button.btn.topbtn.text-center(onclick="location.href='splash.pug'")  Shifterz 
-                |         
+                button.btn.topbtn.text-center(onclick="location.href='http://localhost:7070/splash'")  Shifter 
+                |
                 button.btn.btnnav(onclick="location.href='http://localhost:7070/shift/add'")
-                  | Request Shifts 
+                  | Request Shifts
                   br
                   i.fa.fa-clock-o(aria-hidden='true')
-                |         
+                |
                 button.btn.btnnav(onclick="location.href='http://localhost:7070'")
-                  | Available Shifts 
+                  | Available Shifts
                   br
                   i.fa.fa-calendar-o(aria-hidden='true')
-                |         
+                |
                 button.btn.btnnav(onclick="location.href='profile.html'")
-                  | My Profile 
+                  | My Profile
                   br
                   i.fa.fa-user(aria-hidden='true')
-                |         
+                |
                 button.btn.btnnav(onclick="location.href='settings.html'")
-                  | Settings  
+                  | Settings
                   br
                   i.fa.fa-cogs(aria-hidden='true')
-            |     
+            |
             .col-sm-9.col-lg-10.mainscreen
               block content
-
-    
